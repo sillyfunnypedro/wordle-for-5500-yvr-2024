@@ -55,17 +55,7 @@ async function inputWord(): Promise<string> {
  * @returns Feedback string
  */
 function generateAnswer(targetWord: string, word: string): string {
-    let result = '';
-
-    for (let i = 0; i < word.length; i++) {
-        if (word[i] === targetWord[i]) {
-            result += word[i].toUpperCase(); // Correct position
-        } else if (targetWord.includes(word[i])) {
-            result += word[i].toLowerCase(); // Incorrect position
-        } else {
-            result += '_'; // Not in targetWord
-        }
-    }
+    let result = '@@@@@'
 
     return result;
 }
